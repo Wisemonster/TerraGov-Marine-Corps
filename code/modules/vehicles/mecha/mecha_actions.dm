@@ -260,7 +260,7 @@
 	qdel(charge)
 	new /obj/effect/temp_visual/lightning_discharge(get_turf(chassis))
 	chassis.move_delay -= added_movetime
-	for(var/turf/location in RANGE_TURFS(1, chassis))
+	for(var/turf/location in RANGE_TURFS(2, chassis))
 		for(var/mob/living/target in location)
 			target.take_overall_damage(200, BURN, LASER, updating_health=TRUE, penetration=30, max_limbs=6)
 	playsound(chassis, 'sound/weapons/burst_phaser2.ogg', GUN_FIRE_SOUND_VOLUME, TRUE)
